@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 
+<body>
+    <script>
+        var btn = document.getElementById("btngiai");
+        //----------------------------------------------------------------
+        function giaipt(from) {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
+            if (a == 0) {
+                if (b == 0) {
+                    if (c == 0) {// vo so nghiem
+                        document.getElementById("kq").innerHTML = "<p>phuong trinh vo so nghiem</p>";
+                    }
+                    else {//vo nghiem
+                        document.getElementById("kq").innerHTML = "<p>phuong trinh vo nghiem</p>";
+                    }
+                }
+                else {
+                    var x = -b / a;
+                    x = x.toFixed(2);
+                    document.getElementById("kq").innerHTML = x;
+                }
+            }
+            else {
+                var delta = b * b - 4 * a * c;
+                if (delta < 0) {//pt vo nghiem
+                    document.getElementById("kq").innerHTML = "<p>phuong trinh vo nghiem</p>";
+                } else if
+                    (delta == 0) {//pt nghiem kep
+                    var x = -b / (2 * a); x = x.toFixed(2); document.getElementById("kq").innerHTML = x;
+                }
+                else {//delta>0: 2 nghiem
+                    var x1 = (- b - Math.sqrt(delta)) / (2 * a);
+                    x1 = x1.toFixed(2);
+                    var x2 = (- b + Math.sqrt(delta)) / (2 * a);
+                    x2 = x2.toFixed(2);
+                    var str = `<p>phuong trinh co 2 nghiem:<br>
+                 X<sub>1</sub> = ${x1}<br>
+                X<sub>2</sub> = ${x2}</p>`
+                    document.getElementById("kq").innerHTML = str;
+                }
+            }
+        }
+        //-----------------------------------
+        // btn.addEventListener("click", giaipt);
+    </script>
+</body> <body>
+    <form method="post">
+      <center>
+        <br>Nhập giá trị a:
+        <input type="text" name="a" value="">
+        <br> Nhập giá trị b:
+        <input type="text" name="b" value="">
+        <br>Nhập giá trị c:
+        <input type="text" name="c" value="">
+        <br>Đáp số:
+        <input type="text" name="x" value="">
+        <input type="text" name="y" value="">
+        <input type="button" value="giai" onClick="giai(this.form)">
+      </center>
+    </form>
+  </body> -->
+
+<body>
+    <script type="text/javascript">
+        // var a =  6;
+        // var b =  4;
+        // var value;
+        // if (a > b) {
+        //     console.log('max= '+ a);
+        // } else {
+        //     console.log('max= '+ b);
+        // }
+        //alert("so lon nhat la: " + value);
+        // function Nhap() {
+        //     var a, b;
+        //     a = prompt("Nhập giá trị a")
+        //     if (a != null && a != "") {
+        //         console.log(a);
+        //         b = prompt("Nhập giá trị b");
+        //         if (a != null && a != "") {
+        //             console.log(b)
+        //             if (parseFloat(a) > parseFloat(b)) {
+        //                 console.log('so lon nhat la :' + a)
+        //             }
+        //             else {
+        //                 console.log('so lon nhat la :' + b)
+        //             }
+        //         }
+        //         else {
+        //             alert('vui long nhap mot so')
+        //         }
+        //     }
+        // }
+        function so_lon_nhat() {
+           const Array=[1,3,5,7,9]
+           //var number = prompt("nhap day so:");
+            var max = Array[0];
+
+            for (var i = 1; i < Array.length; i++) {
+                //var current = number(array[i]);
+                if (  max < Array[i]) {
+                      max = Array[i];
+                }
+            }
+            alert("Số lớn nhất trong dãy là: " + max);
+        }
+        // function findMax() {
+        //     var numbers = prompt("Nhập các số dưới dạng dãy, phân cách bởi dấu phẩy (ví dụ: 1, 2, 3)");
+        //     var array = numbers.split(",");
+        //     var max = Number(array[0]);
+        //     for (var i = 1; i < array.length; i++) {
+        //         var current = Number(array[i]);
+        //         if (current > max) {
+        //             max = current;
+        //         }
+        //     }
+        //     alert("Số lớn nhất trong dãy là: " + max);
+        // }
+    </script>
+</body>
+
+<body>
+    <form>
+        <button onclick="so_lon_nhat()">Tìm số lớn nhất</button>
+    </form>
+</body>
+
+</html>
